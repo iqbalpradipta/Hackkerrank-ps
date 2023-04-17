@@ -9,14 +9,21 @@ package main
 
 func birthday(s []int32, d int32, m int32) int32 {
     // Write your code here
-	for _, v := range s {   
-        for _, j := range s {
-            if v + j == d {
-                return j
-            } else if m < v {
-                return m
+    var count int32
+	var sum int32
+    for i := 0; i < len(s); i++ {
+        sum += s[i]
+    }
+    if sum == d {
+        count ++
+    }
+    for i := 0; i < len(s); i++ {
+        for j := 0; j < len(s); j++ {
+            sum += s[i] + s[j]
+            if sum == d {
+                count ++
             }
         }
     }
-    return 0
+    return count
 }

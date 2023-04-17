@@ -11,13 +11,13 @@ func birthday(s []int32, d int32, m int32) int32 {
     // Write your code here
     var count int32
 	var sum int32
-    for i := 0; i < len(s); i++ {
+    for i := 0; int32(i) < m; i++ {
         sum += s[i]
     }
     if sum == d {
         count ++
     }
-    for i := 0; i < len(s); i++ {
+    for i := m; i < int32(len(s)); i++ {
         for j := 0; j < len(s); j++ {
             sum += s[i] + s[j]
             if sum == d {

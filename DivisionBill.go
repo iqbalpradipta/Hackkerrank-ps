@@ -14,13 +14,11 @@ func bonAppetit(bill []int32, k int32, b int32){
         sum += bill[i] 
         b2 = sum / 2
 		res = b - b2
-        if  b2 == b{
-            fmt.Println(text)
-			break
-        }else if int(bill[i]) > len(bill) {
-            fmt.Println(res)
-			break
-        }
+		if b2 == b {
+			fmt.Println(text)
+		} else if res <= bill[i]{
+			fmt.Println(res)
+		}
     }
 }
 

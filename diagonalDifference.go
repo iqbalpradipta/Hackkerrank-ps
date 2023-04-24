@@ -1,17 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func diagonalDifference(arr [][]int32) int32 {
     // Write your code here
-	var sum int32
-	for i := 0; i < len(arr); i++ {
-		for j := 0; j < len(arr); j++ {
-			sum += arr[i][j]
-			fmt.Println(sum)
-		}
+	var sumLeft int32
+	var sumRight int32
+	var l int = len(arr)
+	for i := 0; i < l; i++ {
+		sumLeft += arr[i][i]
+		sumRight += arr[i][l-1-i]
+		fmt.Println("sumLeft = ", sumLeft)
+		fmt.Println("sumRight = ", sumRight)
 	}
-	return sum
+	result := math.Abs(float64(sumLeft)-float64(sumRight))
+	return int32(result)
 }
 
 func main (){

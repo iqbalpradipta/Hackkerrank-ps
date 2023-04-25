@@ -13,8 +13,6 @@ func diagonalDifference(arr [][]int32) int32 {
 	for i := 0; i < l; i++ {
 		sumLeft += arr[i][i]
 		sumRight += arr[i][l-1-i]
-		fmt.Println("sumLeft = ", sumLeft)
-		fmt.Println("sumRight = ", sumRight)
 	}
 	result := math.Abs(float64(sumLeft)-float64(sumRight))
 	return int32(result)

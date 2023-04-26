@@ -24,9 +24,8 @@ func plusMinus(arr []int32) {
     fmt.Printf("%.6f\n", resultZero/n)
 }
 
-func main()  {
-	var arr []int32 = []int32{-4, 3, -9, 0, 4, 1}
-	// var n int32 = int32(len(arr))
+// func main()  {
+// 	var arr []int32 = []int32{-4, 3, -9, 0, 4, 1}
 
-	plusMinus(arr)
-}
+// 	plusMinus(arr)
+// }

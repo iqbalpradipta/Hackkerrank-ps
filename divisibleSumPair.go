@@ -1,6 +1,6 @@
 package main
 
-import "fmt"
+// import "fmt"
 
 func divisibleSumPairs(n int32, k int32, ar []int32) int32 {
     // Write your code here
@@ -15,9 +15,9 @@ func divisibleSumPairs(n int32, k int32, ar []int32) int32 {
 	return count
 }
 
-func main()  {
-	var n int32 = 6
-	var k int32 = 3
-	var ar []int32 = []int32{1, 3, 2, 6, 1, 2}
-	fmt.Println(divisibleSumPairs(n,k,ar))
-}
+// func main()  {
+// 	var n int32 = 6
+// 	var k int32 = 3
+// 	var ar []int32 = []int32{1, 3, 2, 6, 1, 2}
+// 	fmt.Println(divisibleSumPairs(n,k,ar))
+// }

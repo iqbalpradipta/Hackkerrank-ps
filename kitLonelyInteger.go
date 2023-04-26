@@ -1,6 +1,6 @@
 package main
 
-// import "fmt"
+import "fmt"
 
 
 
@@ -13,7 +13,7 @@ func lonelyinteger(a []int32) int32 {
 	return sum
 }
 
-// func main()  {
-// 	a := []int32{0,0,2,4,4,1,1}
-// 	fmt.Println(lonelyinteger(a))
-// }
+func main()  {
+	a := []int32{0,0,2,4,4,1,1}
+	fmt.Println(lonelyinteger(a))
+}

@@ -1,7 +1,7 @@
 package main
 
 import (
-	// "fmt"
+	"fmt"
 	"sort"
 )
 
@@ -19,7 +19,7 @@ func findMedian(arr []int32) int32 {
 	return arr[median]
 }
 
-// func main()  {
-// 	arr := []int32{1,2,6,5,3}
-// 	fmt.Println(findMedian(arr))
-// }
+func main()  {
+	arr := []int32{1,2,6,5,3}
+	fmt.Println(findMedian(arr))
+}

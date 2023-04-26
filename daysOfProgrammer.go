@@ -2,7 +2,7 @@ package main
 
 import (
 	"strconv"
-	// "fmt"
+	"fmt"
 )
 
 func dayOfProgrammer(year int32) string {
@@ -34,8 +34,8 @@ func KalenderJulian(year int32) string {
 	}
 }
 
-// func main()  {
-// 	fmt.Println(dayOfProgrammer(2019))
-// 	fmt.Println(dayOfProgrammer(1918))
-// 	fmt.Println(dayOfProgrammer(1700))
-// }
+func main()  {
+	fmt.Println(dayOfProgrammer(2019))
+	fmt.Println(dayOfProgrammer(1918))
+	fmt.Println(dayOfProgrammer(1700))
+}

@@ -23,8 +23,8 @@ func miniMaxSum(arr []int32) {
 	
 }
 
-// func main()  {
-// 	arr := []int32{1,2,3,4,5}
-// 	miniMaxSum(arr)
+func main()  {
+	arr := []int32{1,2,3,4,5}
+	miniMaxSum(arr)
 
-// }
+}

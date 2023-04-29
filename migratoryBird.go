@@ -6,15 +6,21 @@ import (
 
 func migratoryBirds(arr []int32) int32 {
     // Write your code here
-	var sum int32
-	for i := 0; i < len(arr); i++ {
-		for j := len(arr)-1; j >= 0; j-- {
-			if arr[i] == arr[j] {
-				sum++
-			}
+	bird := map[int32]int32{}
+	var count int32
+	var res int32
+	
+	for _, v := range arr {
+		bird[v]++ 
+		if bird[v] > count {
+			res = v
+			count = bird[v]
+		} else if bird[v] == count && v < res { 
+			res = v 	
 		}
+		
 	}
-	return sum
+	return res
 }
 
 func main()  {

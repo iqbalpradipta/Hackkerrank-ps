@@ -10,11 +10,9 @@ func getMoneySpent(keyboards []int32, drives []int32, b int32) int32 {
 
      for i := 0; i < len(keyboards); i++ {
         for j := 0; j < len(drives); j++ {
-            if maxBill < keyboards[i] + drives[j] && b > keyboards[i] + drives[j] {
-                maxBill = keyboards[i] + drives[j]
-            }
-            if maxBill == b {
-                return maxBill
+            total := keyboards[i] + drives[j]
+            if total <= b && total >= maxBill{
+                maxBill = total
             }
         }
      }

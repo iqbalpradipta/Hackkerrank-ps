@@ -1,21 +1,27 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func pickingNumbers(a []int32) int32 {
     // Write your code here
-
-	var diff int32 
-	for _, v := range a {
-		var count int32
-		for _, n := range a{
-			if (a[v] - a[n]) <= 1 && a[v] >= a[n] {
-				count += 1
-				n += 1
+	sort.Slice(a, func(i, j int) bool {
+		return a[i] >= a[j]
+	})
+	var diff int32 = 0
+	for i := 0; i < len(a)-1; i++ {
+		var count int32 = 0
+		for j := i; j < len(a); j++ {
+			if a[i] - a[j] <= 1{
+				count++
+				if count > diff {
+					diff =	count
+				}
+			} else {
+				count = 0
 			}
-		}
-		if count > diff {
-			diff = count-1
 		}
 	}
 	return diff

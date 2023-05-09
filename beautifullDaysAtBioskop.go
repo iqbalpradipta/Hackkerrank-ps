@@ -1,6 +1,6 @@
 package main
 
-// import "fmt"
+import "fmt"
 
 
 func beautifulDays(i int32, j int32, k int32) int32 {
@@ -31,9 +31,9 @@ func abs(n int32) int32 {
     return n
 }
 
-// func main()  {
-//     i := int32(20)
-//     j := int32(23)
-//     k := int32(6)
-//     fmt.Println(beautifulDays(i,j,k))
-// }
+func main()  {
+    i := int32(20)
+    j := int32(23)
+    k := int32(6)
+    fmt.Println(beautifulDays(i,j,k))
+}
